@@ -24,8 +24,6 @@ class SIMPLEX:
 
         self.terminated = False
 
-
-
         self.e = None
         self.l = None
         self.L_B = None
@@ -82,7 +80,7 @@ class SIMPLEX:
         else:
             # wähle e € N mit cq_e > 0  und kleinseten Index
             n = self.cq.shape[0]
-            possible_e =[i[0] for i in list(zip(range(n), self.c_)) if i[0] in self.N and i[1] > 0]
+            possible_e = [i[0] for i in list(zip(range(n), self.c_)) if i[0] in self.N and i[1] > 0]
             self.e = min(possible_e)
 
             if self.debug_print:
@@ -120,7 +118,7 @@ class SIMPLEX:
 
                     if self.debug_print:
                         s = " " * self.n_spaces * 3
-                        s += "bq_" + str(i) + " : Aq_"+str(i) + str(self.e) + " = " + str(round(v[0], 3))
+                        s += "bq_" + str(i) + " : Aq_" + str(i) + str(self.e) + " = " + str(round(v[0], 3))
                         s += " = " + str(self.bq[i][0]) + " / " + str(self.Aq[i][self.e])
                         s += " mit l = " + str(B_i)
                         print(s)
@@ -171,9 +169,3 @@ class SIMPLEX:
 
         if self.debug_print:
             print(" " * self.n_spaces * 2 + "z: ", z)
-
-
-
-
-
-
