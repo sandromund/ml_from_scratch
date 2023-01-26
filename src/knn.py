@@ -1,4 +1,4 @@
-from src.misc import euclidean_distance, euclidean_norm
+from misc import euclidean_distance, euclidean_norm
 
 
 def k_nearest_neighbors(X, y, v, k, regression=False, d=euclidean_distance):
