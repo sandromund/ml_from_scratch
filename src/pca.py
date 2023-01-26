@@ -1,8 +1,8 @@
 from numpy import mean
 from numpy.linalg import eig # eigenvalues_and_eigenvectors
 
-from src.algebra import matrix_transpose, matrix_multiplication
-from src.statistic import covariance_matrix
+from algebra import matrix_transpose, matrix_multiplication
+from statistic import covariance_matrix
 
 T = matrix_transpose
 
