@@ -1,7 +1,7 @@
 from math import e
 import numpy as np
 
-from src.algebra import matrix_multiplication
+from algebra import matrix_multiplication
 
 
 def sigmoid(x):
