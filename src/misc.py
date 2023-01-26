@@ -1,7 +1,7 @@
 from math import sqrt
 
-from src.statistic import expected_value, standard_deviation
-from src.algebra import dot_product, l2_norm
+from statistic import expected_value, standard_deviation
+from algebra import dot_product, l2_norm
 
 
 def mean_square_error(Y, Y_prediction):
