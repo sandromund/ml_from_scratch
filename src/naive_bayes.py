@@ -1,4 +1,4 @@
-import src.statistic as stc
+import statistic as stc
 
 p = stc.conditional_probability
 m = stc.marginal_probability
