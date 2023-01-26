@@ -19,7 +19,7 @@ def LCG(seed, n, a=1664525, c=1013904223, m=2 ** 32):
 
 
 def get_random_numbers_vector(m):
-    return np.random.random(int((np.random.random()*m)))
+    return np.random.random(int((np.random.random() * m)))
 
 
 def prior_probability(x_i, X):
@@ -50,5 +50,3 @@ def mutual_information(X, Y):
         j = joint_probability(x_i, y_i, X, Y)
         result_sum += j * math.log1p(j / m)
     return result_sum
-
-
