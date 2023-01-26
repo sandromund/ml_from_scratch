@@ -1,4 +1,4 @@
-from src.algebra import matrix_transpose
+from algebra import matrix_transpose
 
 import math
 
