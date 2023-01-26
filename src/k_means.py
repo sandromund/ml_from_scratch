@@ -24,7 +24,6 @@ def k_means_Lloyd(X, k):
 
 
 if __name__ == '__main__':
-
     import matplotlib.pyplot as plt
     from sklearn.datasets import make_blobs
 
