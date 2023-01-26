@@ -4,27 +4,26 @@ import random
 
 
 def plot_wolrd(actions):
-    points =[]
+    points = []
     for i in range(len(actions)):
         for j in actions[i]:
             points += [(i, j)]
     G = nx.DiGraph()
     G.add_edges_from(points)
     pos = nx.spring_layout(G)
-    nx.draw_networkx_nodes(G,pos, alpha=0.5, arrows=True)
-    nx.draw_networkx_edges(G,pos, stlye='dashdot')
-    nx.draw_networkx_labels(G,pos)
+    nx.draw_networkx_nodes(G, pos, alpha=0.5)
+    nx.draw_networkx_edges(G, pos)
+    nx.draw_networkx_labels(G, pos)
     plt.show()
 
 
 def update_Q_matrix(Q, state, action, value):
-    Q[state] =  Q[state][:action] + [value] + Q[state][action+1:]
+    Q[state] = Q[state][:action] + [value] + Q[state][action + 1:]
     return Q_matrix
 
 
 if __name__ == '__main__':
     actions = [[1, 2], [2, 5], [7], [4], [7], [6, 4], [3], []]
-
 
     rewards = [-1, -1, -100, 10, -1, -1, 10, -1, 100]
     goal = 7
@@ -34,11 +33,11 @@ if __name__ == '__main__':
 
     Q = [[0] * n_states] * n_states
 
-    epsilon = 1.0            # Greed 100%
-    epsilon_min = 0.005      # Minimum greed 0.05%
+    epsilon = 1.0  # Greed 100%
+    epsilon_min = 0.005  # Minimum greed 0.05%
     epsilon_decay = 0.99993  # Decay multiplied with epsilon after each episode
-    n_episodes = 100         # Amount of games
-    max_steps = 10           # Maximum steps per episode
+    n_episodes = 100  # Amount of games
+    max_steps = 10  # Maximum steps per episode
     learning_rate = 0.65
 
     Q_matrix = [[0] * n_states] * n_states
@@ -93,4 +92,3 @@ if __name__ == '__main__':
     print("Selected path:")
     print(steps)
     plot_wolrd(actions)
-
