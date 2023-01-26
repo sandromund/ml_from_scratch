@@ -5,7 +5,7 @@ from itertools import product
 def ks_exhaustive(s_list, v_list, S):
     m = len(s_list)
     opt_i = 0
-    selection_list = list(product((1,0), repeat=m))
+    selection_list = list(product((1, 0), repeat=m))
     for selection in selection_list:
         result = v_kS(selection, s_list, v_list, S, m)
         if result and result > opt_i:
