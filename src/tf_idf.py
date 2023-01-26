@@ -1,6 +1,6 @@
 import math
 
-from src.misc import cosine_similarity
+from misc import cosine_similarity
 
 member_vector = lambda word, sentence: 1 if (word in sentence) else 0
 
