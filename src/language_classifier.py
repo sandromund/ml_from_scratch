@@ -61,7 +61,25 @@ letter_frequencies = {
     }
 }
 
+
 def get_text_letters(text):
+    letters = []
+    for word_letters in map(list, text.lower().split()):
+        letters += word_letters
+    return letters
+
+
+def classify_language(text):
+    result = {}
+    for language in letter_frequencies.keys():
+        result[language] = 0
+        for letter in get_text_letters(text):
+            p = letter_frequencies[language].get(letter)
+            if p is not None:
+                result[language] += p
+    return max(result, key=result.get)
+
+
 if __name__ == '__main__':
 
     text_a = """
