@@ -1,12 +1,11 @@
+# Machine learning from the scratch
+
+Here I have implemented some algorithms from in python without using libraries.
 
 
+# Basics
 
-<style>#notebook { padding-top:0px !important; } .container { width:90% !important; } .end_space { min-height:0px !important; } </style>
-
-
-  <h1 style="color:darkblue; font-size:300%"> Basics </h1>
-
-# Lineare Algebra
+## Lineare Algebra
 
 
 ```python
@@ -43,7 +42,7 @@ def l2_norm(v):
 
 ```
 
-# Statistik
+## Statistik
 
 
 ```python
@@ -87,7 +86,7 @@ def covariance_matrix(A):
             for i in matrix_transpose(A)]
 ```
 
-# Outliers
+## Outliers
 
 
 ```python
@@ -97,7 +96,7 @@ def get_outliers_by_standard_deviation(X, threshold=3):
 
 
 
-# t-test
+## t-test
 
 ```python
 def t_test(X, Y):
@@ -116,7 +115,7 @@ def s_p(X, Y):
 
 
 
-# z-test 
+## z-test 
 
 
 ```python
@@ -127,7 +126,7 @@ def z_test(sample, population):
 
 
 
-# Analysis of Variance
+## Analysis of Variance
 
 ```python
 
@@ -151,7 +150,7 @@ def ANOVA(groups):
 
 
 
-# Misc
+## Misc
 
 
 ```python
@@ -202,8 +201,7 @@ Y = data.y.values
 
 ![png](pic/output_29_0.png)
 
-
-<h1 style="color:darkblue; font-size:300%"> Klassifikation </h1>
+# Classification 
 
 
 ```python
@@ -247,7 +245,7 @@ def gaussian_naive_bayes_classifier(v, X, Y):
 ![png](pic/output_31_1.png)
 
 
-<h1 style="color:darkblue; font-size:300%"> Clustern </h1>
+# Custering
 
 
 ```python
@@ -274,23 +272,10 @@ def k_means_Lloyd(X, k):
 ```
 
 
-```python
-plt.figure(figsize=(12, 4), dpi=80)
-plt.scatter(X[:, 0], X[:, 1], c=k_means_Lloyd(X, k=3))
-```
-
-
-
-
-    <matplotlib.collections.PathCollection at 0x7fada03898d0>
-
-
-
-
 ![png](pic/output_34_1.png)
 
 
-<h1 style="color:darkblue; font-size:300%"> Dimensionsreduktion </h1>
+# Dimension reduction
 
 
 ```python
@@ -327,7 +312,7 @@ principal_component_analysis(A)
 
 
 
-<h1 style="color:darkblue; font-size:300%"> Anomalieerkennung </h1>
+# Anomaly detection
 
 
 ```python
@@ -372,17 +357,10 @@ plt.scatter(data.x, data.y, c=knn_distance,  s=[x*30 for x in knn_distance])
 ```
 
 
-
-
-    <matplotlib.collections.PathCollection at 0x7fada0374410>
-
-
-
-
 ![png](pic/output_41_1.png)
 
 
-<h1 style="color:darkblue; font-size:300%"> Assoziationsanalyse </h1>
+# Association analysis
 
 
 ```python
@@ -452,7 +430,7 @@ apriori_algorithm(transactions, min_support=0.6, min_confidence=0.8)
     {'B', 'A'} => {'E'} with  1.0  confidence
 
 
-<h1 style="color:darkblue; font-size:300%"> Empfehlungen </h1>
+# Recommendations Systems
 
 
 ```python
@@ -552,21 +530,7 @@ cosine_similarity(data_v[1], data_v[2])
 
 
 
-<h1 style="color:darkblue; font-size:300%"> Neuronales Netz </h1>
-
-
-```python
-data_classification = make_classification(n_samples=300,n_features=4, n_classes=2)
-data = pd.DataFrame.from_records(data_classification[0], columns=['x1', 'x2', 'x3', 'x4'])
-data['y'] = data_classification[1]
-plt.figure(figsize=(14, 8))
-plt.scatter(data.x3, data.x4, c=data.y)
-plt.show()
-```
-
-
-
-
+#  Neural network
 
 ```python
 from math import e
@@ -641,10 +605,9 @@ for i in range(9):
 ![png](pic/output_52_0.png)
 
 
-<h1 style="color:darkblue; font-size:300%"> Genetische Algorithmen </h1>
+# Genetic algorithms
 
-# Knapsack Beispiel
-
+## Knapsack example
 
 ```python
 from itertools import product
@@ -672,12 +635,6 @@ def v_kS(selection, s_list, v_list, S, k, m):
 
 ks_exhaustive([5, 5, 4, 5, 5],[9, 9, 1, 9, 9],4,1)
 ```
-
-
-
-
-    1
-
 
 
 
@@ -760,7 +717,7 @@ ks.best_score
 
 
 
-<h1 style="color:darkblue; font-size:300%"> Reinforcement learning </h1>
+# Reinforcement learning
 
 
 ```python
@@ -787,10 +744,6 @@ plot_wolrd(actions)
 
 
 ![png](pic/output_59_0.png)
-
-
-
-    <Figure size 1440x640 with 0 Axes>
 
 
 
