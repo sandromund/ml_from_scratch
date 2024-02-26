@@ -3,7 +3,7 @@
 Here I have implemented some algorithms from in python without using libraries.
 
 
-# Statistik
+# Statistic
 
 
 ```python
