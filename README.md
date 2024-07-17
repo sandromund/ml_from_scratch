@@ -1,6 +1,6 @@
 # Machine learning from the scratch
 
-Here I have implemented some algorithms from in python without using libraries.
+Here I have implemented some algorithms in python without using libraries.
 
 
 # Statistic
